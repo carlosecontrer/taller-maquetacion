@@ -840,4 +840,42 @@ img {
     color: var(--firt-color-lightened);
   }
 }
+
+@media screen and (min-width: 1024px) {
+  body {
+    margin: 0;
+    padding-left: var(--nav-whidth);
+  }
+  .l-header {
+    width: 0;
+  }
+  .nav_toggle,
+  .nav_logo,
+  .nav_close {
+    display: none;
+  }
+  .nav_menu {
+    left: 0;
+  }
+  .home_container {
+    height: 100vh;
+  }
+  .section {
+    padding: 4.8rem 0 3.2rem;
+  }
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .services_container, .works_container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .section {
+    min-height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 /*# sourceMappingURL=style.css.map */
