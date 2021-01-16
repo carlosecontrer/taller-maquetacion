@@ -651,6 +651,67 @@ img {
 }
 
 /*CONTACT*/
+.contact_container {
+  row-gap: 4.8rem;
+}
+
+.contact_input {
+  width: 100%;
+  padding: 1.6rem;
+  outline: none;
+  border: none;
+  background-color: var(--light-color);
+  font-size: var(--font-size-medium);
+  margin-bottom: var(--mb-2);
+  border-radius: 0.8rem;
+}
+
+.contact ::-webkit-input-placeholder {
+  color: var(--first-color);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact :-ms-input-placeholder {
+  color: var(--first-color);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact ::-ms-input-placeholder {
+  color: var(--first-color);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact ::placeholder {
+  color: var(--first-color);
+  font-family: var(--font-main);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact_btn {
+  outline: none;
+  border: none;
+  font-family: var(--font-main);
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+}
+
+.contact_info {
+  margin-bottom: var(--mb-3);
+}
+
+.contact_subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+}
+
+.contact_text {
+  display: block;
+  color: var(--dark-color);
+}
+
 /*FOOTER*/
 .footer {
   background-color: var(--first-color);
@@ -704,7 +765,9 @@ img {
   .about_container,
   .skills_container,
   .services_container,
-  .works_container {
+  .works_container,
+  .contact_container,
+  .contact_inputs {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
@@ -743,6 +806,38 @@ img {
   .project_data,
   .project_title {
     text-align: initial;
+  }
+  .contact_inputs {
+    display: -ms-grid;
+    display: grid;
+    -webkit-column-gap: 2.4rem;
+            column-gap: 2.4rem;
+  }
+  .contac_info {
+    padding-left: 4.8rem;
+  }
+  .footer {
+    background: none;
+  }
+  .footer_container {
+    background-color: var(--second-color);
+    padding: 4.8rem;
+    border-radius: 0.8rem;
+  }
+  .footer_title {
+    color: var(--first-color);
+  }
+  .footer_description {
+    color: var(--dark-color);
+  }
+  .footer_link {
+    color: var(--first-color);
+  }
+  .footer_link:hover {
+    color: var(--firt-color-lightened);
+  }
+  .foooter_copy {
+    color: var(--firt-color-lightened);
   }
 }
 /*# sourceMappingURL=style.css.map */
