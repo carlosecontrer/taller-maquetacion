@@ -1,0 +1,120 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  .arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 3.75rem;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      text-shadow: 0px 0px 10px #000, 0px 0px 10px #000;
+    }
+  }
+
+  .prev {
+    left: 3%;
+  }
+  .next {
+    right: 3%;
+  }
+}
+.slides {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 2s ease-in-out;
+}
+.slide {
+  width: 33.33%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000, $alpha: 0.5);
+  }
+  &:nth-child(1) {
+    background-image: url("../images/image-01.jpg");
+  }
+  &:nth-child(2) {
+    background-image: url("../images/image-02.jpg");
+  }
+  &:nth-child(3) {
+    background-image: url("../images/image-03.jpg");
+  }
+  &-data {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 0 20%;
+    h2 {
+      font-family: "Anton", serif;
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 3rem;
+    }
+    p {
+      font-family: "Cabin", serif;
+      font-size: 1.2125rem;
+      margin-bottom: 0.625rem;
+    }
+    button {
+      font-family: "Roboto", serif;
+      background: none;
+      outline: none;
+      border: 1px solid #fff;
+      color: #fff;
+      font-weight: bolder;
+      padding: 0.625rem 1.5rem;
+      border-radius: 1rem;
+      font-size: 1.25rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: #000;
+        background-color: #fff;
+        //border-color: #000;
+      }
+    }
+  }
+}
+
+.dots{
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+    span{
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 50%;
+        color: #fff;
+    }
+}

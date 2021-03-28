@@ -1,0 +1,141 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider .arrows {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 3.75rem;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.slider .arrows:hover {
+  text-shadow: 0px 0px 10px #000, 0px 0px 10px #000;
+}
+
+.slider .prev {
+  left: 3%;
+}
+
+.slider .next {
+  right: 3%;
+}
+
+.slides {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.slide {
+  width: 33.33%;
+  height: 100%;
+  position: relative;
+  float: left;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slide:nth-child(1) {
+  background-image: url("../images/image-01.jpg");
+}
+
+.slide:nth-child(2) {
+  background-image: url("../images/image-02.jpg");
+}
+
+.slide:nth-child(3) {
+  background-image: url("../images/image-03.jpg");
+}
+
+.slide-data {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  padding: 0 20%;
+}
+
+.slide-data h2 {
+  font-family: "Anton", serif;
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.slide-data p {
+  font-family: "Cabin", serif;
+  font-size: 1.2125rem;
+  margin-bottom: 0.625rem;
+}
+
+.slide-data button {
+  font-family: "Roboto", serif;
+  background: none;
+  outline: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bolder;
+  padding: 0.625rem 1.5rem;
+  border-radius: 1rem;
+  font-size: 1.25rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-data button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 50%;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
